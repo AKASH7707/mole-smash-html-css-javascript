@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: #7bcf5c; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+.controls {
+    text-align: center;
+    background: white;
+    padding: 10px 40px;
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    margin-bottom: 30px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #ff5722;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+button:hover {
+    background-color: #e64a19;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 500px;
+    height: 500px;
+}
+
+
+/* The Holes */
+.hole {
+    background-color: #fff6ed;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    box-shadow: inset 0 10px 20px rgba(0,0,0,0.8);
+}
+
+/* The Moles */
+.mole {
+    background-color: brown; 
+    width: 70%;
+    height: 90%;
+    border-radius: 50% 50% 0 0;
+    position: absolute;
+    bottom: 0;
+    left: 15%;
+    cursor: pointer;
+    color: azure;
+    font-size: 30px;
+    
+ 
+    transform: translateY(100%);
+
+    transition: transform 0.2s cubic-bezier(0.1, 0.7, 0.1, 1); 
+}
+
+.mole:hover{
+    background-color: rgb(249, 7, 7);
+}
+
+
+.hole.up .mole {
+    transform: translateY(20%);
+}
