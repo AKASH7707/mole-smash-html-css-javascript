@@ -37,8 +37,9 @@ const show = () => {
 }
 
 const startGame = () => {
-    score.innerText = 0;
+    scoreBoard.innerText = 0;
     score = 0;
+    timeUp = false;
     let timeLeft = gameTime;
     startBtn.disabled = true;
 
